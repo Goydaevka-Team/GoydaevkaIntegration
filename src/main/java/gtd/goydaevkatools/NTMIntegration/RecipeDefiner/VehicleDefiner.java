@@ -3,6 +3,8 @@ package gtd.goydaevkatools.NTMIntegration.RecipeDefiner;
 import mcheli.aircraft.MCH_AircraftInfoManager;
 import mcheli.vehicle.MCH_VehicleInfoManager;
 
+import java.util.HashMap;
+
 public class VehicleDefiner extends AbstractDefiner
 {
     private static VehicleDefiner INSTANCE;
@@ -21,6 +23,6 @@ public class VehicleDefiner extends AbstractDefiner
 
     @Override
     void AbstractDefineProcedure() {
-        
+
     }
 }
