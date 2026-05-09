@@ -11,6 +11,7 @@ import gtd.goydaevkatools.ModItems.GTDCrafts;
 import gtd.goydaevkatools.ModItems.GTDITems;
 import gtd.goydaevkatools.NTMIntegration.Loaders.NTMRecipesLoader;
 import gtd.goydaevkatools.NTMIntegration.RecipeDefiner.TankDefiner;
+import gtd.goydaevkatools.utils.Singleton;
 import mcheli.tank.MCH_TankInfoManager;
 import net.minecraft.creativetab.CreativeTabs;
 import org.apache.logging.log4j.LogManager;
@@ -46,7 +47,7 @@ public class CORE {
         LOGGER.info("Hello, RFG example mod!");
         //господь, прости меня за это.
 
-        TankDefiner.getINSTANCE().DefineRecipes();
+        TankDefiner.DefineRecipes();
         GTDCrafts.InitializeCrafts();
         for (Object key : MCH_TankInfoManager.map.keySet()) {
             LOGGER.info(key.toString());
