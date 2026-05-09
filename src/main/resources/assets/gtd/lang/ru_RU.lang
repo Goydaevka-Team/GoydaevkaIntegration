@@ -8,3 +8,7 @@ item.tank_component.rolled_armor.name=Лист Катанной Гомогенн
 item.wheel.name=Колесо
 item.tank_component.nera_assembly.name=Элемент NERA
 item.textolite_plate.name=Лист Текстолита
+item.tank_ammo.atgm=ПТУР
+item.tank_ammo.autocannonapfds=Лента 30мм бронебойных боеприпасов
+item.tank_ammo.autocannonhe=Лента 30мм взрывных боеприпасов
+item.tank_ammo.heat=120ММ HEAT

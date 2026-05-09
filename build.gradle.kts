@@ -12,7 +12,7 @@ plugins {
 
 // Project properties
 group = "gtd.goydaevkatools"
-version = "0.0.1"
+version = "0.0.2"
 
 // Set the toolchain version to decouple the Java we run Gradle with from the Java used to compile and run the mod
 java {
