@@ -5,9 +5,11 @@ import gtd.goydaevkatools.NTMIntegration.Loaders.NTMRecipesLoader;
 import gtd.goydaevkatools.NTMIntegration.VesselNTMRecipe;
 import mcheli.aircraft.MCH_AircraftInfoManager;
 
-public abstract class AbstractDefiner {
+public abstract class AbstractDefiner{
 
     abstract MCH_AircraftInfoManager GetOperatingManager();
+
+
 
     public void DefineRecipes(){
         CORE.LOGGER.info("DEFINING " + this.getClass().getSimpleName());

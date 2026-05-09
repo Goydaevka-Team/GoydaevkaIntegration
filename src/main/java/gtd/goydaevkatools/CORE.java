@@ -10,7 +10,10 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import gtd.goydaevkatools.ModItems.GTDCrafts;
 import gtd.goydaevkatools.ModItems.GTDITems;
 import gtd.goydaevkatools.NTMIntegration.Loaders.NTMRecipesLoader;
+import gtd.goydaevkatools.NTMIntegration.RecipeDefiner.HeliDefiner;
+import gtd.goydaevkatools.NTMIntegration.RecipeDefiner.PlaneDefiner;
 import gtd.goydaevkatools.NTMIntegration.RecipeDefiner.TankDefiner;
+import gtd.goydaevkatools.NTMIntegration.RecipeDefiner.VehicleDefiner;
 import mcheli.tank.MCH_TankInfoManager;
 import net.minecraft.creativetab.CreativeTabs;
 import org.apache.logging.log4j.LogManager;
@@ -47,6 +50,10 @@ public class CORE {
         //господь, прости меня за это.
 
         TankDefiner.getINSTANCE().DefineRecipes();
+        HeliDefiner.getINSTANCE().DefineRecipes();
+        VehicleDefiner.getINSTANCE().DefineRecipes();
+        PlaneDefiner.getINSTANCE().DefineRecipes();
+        
         GTDCrafts.InitializeCrafts();
         for (Object key : MCH_TankInfoManager.map.keySet()) {
             LOGGER.info(key.toString());

@@ -3,8 +3,10 @@ package gtd.goydaevkatools.NTMIntegration;
 import com.hbm.inventory.RecipesCommon;
 import com.hbm.inventory.recipes.loader.GenericRecipe;
 import gtd.goydaevkatools.CORE;
+import mcheli.helicopter.MCH_HeliInfoManager;
 import mcheli.plane.MCP_PlaneInfoManager;
 import mcheli.tank.MCH_TankInfoManager;
+import mcheli.vehicle.MCH_VehicleInfoManager;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -24,11 +26,17 @@ public class VesselNTMRecipe {
         Item vesselItem = null;
         try {
             switch (veselType) {
-                case AIRCRAFT:
+                case PLANE:
                     vesselItem = MCP_PlaneInfoManager.get(name).getItem();
                     break;
                 case TANK:
                     vesselItem = MCH_TankInfoManager.get(name).getItem();
+                    break;
+                case HELI:
+                    vesselItem = MCH_HeliInfoManager.get(name).getItem();
+                    break;
+                case VEHICLE:
+                    vesselItem = MCH_VehicleInfoManager.get(name).getItem();
                     break;
                 default:
                     CORE.LOGGER.error("VESSEL TYPE WAS NOT FOUND");

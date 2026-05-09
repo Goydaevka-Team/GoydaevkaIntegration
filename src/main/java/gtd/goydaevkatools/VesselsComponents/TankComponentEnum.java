@@ -8,3 +8,4 @@ public enum TankComponentEnum {
     RUSSIAN_ARMOR,
     NERA_ASSEMBLY
 }
+

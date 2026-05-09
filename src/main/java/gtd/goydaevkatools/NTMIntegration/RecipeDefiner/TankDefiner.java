@@ -61,7 +61,7 @@ public class TankDefiner extends AbstractDefiner{
             new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
         ));
         DefineRecipe(new VesselNTMRecipe(
-            "2s38",VESSEL_TYPE.TANK,100, 100,
+            "bmp2m",VESSEL_TYPE.TANK,100, 100,
             new RecipesCommon.OreDictStack(AL.plateCast(), 8),
             new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
             new RecipesCommon.ComparableStack(ModItems.motor, 4),
@@ -128,6 +128,7 @@ public class TankDefiner extends AbstractDefiner{
             new RecipesCommon.ComparableStack(ModItems.motor, 4),
             new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
         ));
+
         //2S38
         //AL CAST PLATES
         //M2A3 STEEL CAST PLATES
