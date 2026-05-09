@@ -163,21 +163,21 @@ public class TankDefiner extends AbstractDefiner{
             new RecipesCommon.OreDictStack(STEEL.plateCast(), 3),
             new RecipesCommon.ComparableStack(GTDITems.wheel,2),
             new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
-            new RecipesCommon.OreDictStack(STEEL.shell(), 4),
+            new RecipesCommon.OreDictStack(STEEL.shell(), 4)
         ));
             DefineRecipe(new VesselNTMRecipe(
             "2c35",VESSEL_TYPE.TANK,100, 100,
             new RecipesCommon.OreDictStack(STEEL.plateCast(), 20),
             new RecipesCommon.ComparableStack(GTDITems.tankComponents, 14, TankComponentEnum.ROLLER),
             new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 20),
-            new RecipesCommon.OreDictStack(STEEL.shell(), 2),
+            new RecipesCommon.OreDictStack(STEEL.shell(), 2)
         ));
             DefineRecipe(new VesselNTMRecipe(
             "m109",VESSEL_TYPE.TANK,100, 100,
             new RecipesCommon.OreDictStack(STEEL.plateCast(), 28),
             new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
             new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 12),
-            new RecipesCommon.OreDictStack(STEEL.shell(), 3),
+            new RecipesCommon.OreDictStack(STEEL.shell(), 3)
         ));
 
         //2S38
