@@ -72,6 +72,7 @@ public class TankDefiner extends AbstractDefiner{
             new RecipesCommon.OreDictStack(STEEL.plateCast(), 8),
             new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
             new RecipesCommon.ComparableStack(ModItems.motor, 4),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.FIRST_ERA),
             new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
         ));
         DefineRecipe(new VesselNTMRecipe(
@@ -135,5 +136,6 @@ public class TankDefiner extends AbstractDefiner{
         //ZBD04A STEEL + AL
         //EBRC AL PLATES + WHEELS
         //EMBT M2A3 COPY
+        //M2A3 USES BUSK ERA
     }
 }
