@@ -2,8 +2,10 @@ package gtd.goydaevkatools.ModItems;
 
 import com.hbm.inventory.RecipesCommon;
 import com.hbm.items.ModItems;
+import com.hbm.items.machine.ItemCircuit;
 import com.hbm.main.CraftingManager;
 import cpw.mods.fml.common.registry.GameRegistry;
+import gtd.goydaevkatools.VesselsComponents.TankAmmoEnum;
 import gtd.goydaevkatools.VesselsComponents.TankComponentEnum;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -89,6 +91,43 @@ public class GTDCrafts {
                 "XXX", "YYY", "XXX",
                 ('X'), STEEL.plateCast(),
                 ('Y'), GTDITems.tankComponents.stackFromEnum(TankComponentEnum.NERA_ASSEMBLY)
+            }
+        );
+        CraftingManager.addRecipeAuto(GTDITems.tankAmmo.stackFromEnum(TankAmmoEnum.AUTOCANNONHE),
+            new Object[]{
+                "XXX", "YYY", "ZZZ",
+                ('X'), ANY_PLASTICEXPLOSIVE.ingot(),
+                ('Y'), ANY_SMOKELESS.dust(),
+                ('Z'), CU.ingot()
+            }
+        );
+        CraftingManager.addRecipeAuto(GTDITems.tankAmmo.stackFromEnum(TankAmmoEnum.AUTOCANNONAPFDS),
+            new Object[]{
+                "XXX", "YYY", "ZZZ",
+                ('X'), W.ingot(),
+                ('Y'), ANY_SMOKELESS.dust(),
+                ('Z'), CU.ingot()
+            }
+        );
+        CraftingManager.addRecipeAuto(GTDITems.tankAmmo.stackFromEnum(TankAmmoEnum.ATGM),
+            new Object[]{
+                "XZ ",
+                "YVB",
+                "XZ ",
+                ('X'), ANY_PLASTICEXPLOSIVE.ingot(),
+                ('Y'), DictFrame.fromOne(ModItems.circuit, ItemCircuit.EnumCircuitType.ANALOG),
+                ('Z'), ModItems.rocket_fuel,
+                ('B'), ModItems.thruster_small,
+                ('V'), STEEL.shell()
+            }
+        );
+        CraftingManager.addRecipeAuto(GTDITems.tankAmmo.stackFromEnum(TankAmmoEnum.HEAT),
+            new Object[]{
+                " X ", "YVY", "ZZZ",
+                ('X'), ANY_PLASTICEXPLOSIVE.ingot(),
+                ('Y'), ANY_SMOKELESS.dust(),
+                ('Z'), CU.ingot(),
+                ('V'), CU.shell()
             }
         );
     }
