@@ -38,7 +38,7 @@ public class HeliDefiner extends AbstractDefiner
             new RecipesCommon.OreDictStack(AL.plateCast(), 22),
             new RecipesCommon.OreDictStack(TI.plateCast(), 16),
             new RecipesCommon.ComparableStack(GTDITems.wheel,3),
-            new RecipesCommon.ComparableStack(hbm:item.blade_titanium,8),
+            new RecipesCommon.ComparableStack(ModItems.blade_titanium, 8),
             new RecipesCommon.ComparableStack(ModItems.motor, 8),
             new RecipesCommon.OreDictStack(STEEL.lightBarrel(), 2),
             new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 2,GunFactory.EnumModSpecial.ENGINE_DIESEL)
@@ -48,7 +48,7 @@ public class HeliDefiner extends AbstractDefiner
             new RecipesCommon.OreDictStack(AL.plateCast(), 32),
             new RecipesCommon.OreDictStack(TI.plateCast(), 32),
             new RecipesCommon.ComparableStack(GTDITems.wheel,3),
-            new RecipesCommon.ComparableStack(hbm:item.blade_titanium,8),
+            new RecipesCommon.ComparableStack(ModItems.blade_titanium, 8),
             new RecipesCommon.ComparableStack(ModItems.motor, 8),
             new RecipesCommon.OreDictStack(STEEL.lightBarrel(), 4),
             new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 2,GunFactory.EnumModSpecial.ENGINE_DIESEL)
