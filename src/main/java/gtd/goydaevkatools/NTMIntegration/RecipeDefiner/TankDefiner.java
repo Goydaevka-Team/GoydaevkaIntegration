@@ -80,7 +80,7 @@ public class TankDefiner extends AbstractDefiner{
             new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
         ));
         DefineRecipe(new VesselNTMRecipe(
-            "puma",VESSEL_TYPE.TANK,100, 100,
+            "puma", VESSEL_TYPE.TANK,100, 100,
             new RecipesCommon.OreDictStack(STEEL.plateCast(), 8),
             new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
             new RecipesCommon.ComparableStack(ModItems.motor, 4),

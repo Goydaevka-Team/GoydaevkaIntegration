@@ -8,3 +8,7 @@ item.tank_component.rolled_armor.name=Rolled Homogeneous Armor Plate
 item.wheel.name=Wheel
 item.tank_component.nera_assembly.name=NERA Element
 item.textolite_plate.name=Textolite Plate
+item.tank_ammo.atgm.name=ARGM
+item.tank_ammo.autocannonapfds.name=30mm apfsds
+item.tank_ammo.autocannonhe.name=30mm he
+item.tank_ammo.heat.name=120ММ HEAT
