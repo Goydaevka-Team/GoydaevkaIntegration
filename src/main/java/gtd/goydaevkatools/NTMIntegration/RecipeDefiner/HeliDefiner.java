@@ -41,7 +41,8 @@ public class HeliDefiner extends AbstractDefiner
             new RecipesCommon.ComparableStack(ModItems.blade_titanium, 8),
             new RecipesCommon.ComparableStack(ModItems.motor, 8),
             new RecipesCommon.OreDictStack(STEEL.lightBarrel(), 2),
-            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 2,GunFactory.EnumModSpecial.ENGINE_DIESEL)
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
         ));
         DefineRecipe(new VesselNTMRecipe(
             "mh60g",VESSEL_TYPE.HELI,100, 100,
@@ -51,7 +52,8 @@ public class HeliDefiner extends AbstractDefiner
             new RecipesCommon.ComparableStack(ModItems.blade_titanium, 8),
             new RecipesCommon.ComparableStack(ModItems.motor, 8),
             new RecipesCommon.OreDictStack(STEEL.lightBarrel(), 4),
-            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 2,GunFactory.EnumModSpecial.ENGINE_DIESEL)
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
         ));
     }
 }

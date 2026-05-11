@@ -187,6 +187,7 @@ public class TankDefiner extends AbstractDefiner{
             new RecipesCommon.ComparableStack(ModItems.crt_display, 4),
             new RecipesCommon.OreDictStack(STEEL.lightBarrel(), 6),
             new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
+		));
 
         //2S38
         //AL CAST PLATES
