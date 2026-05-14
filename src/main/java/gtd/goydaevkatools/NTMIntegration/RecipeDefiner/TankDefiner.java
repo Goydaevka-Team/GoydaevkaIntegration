@@ -11,7 +11,12 @@ import gtd.goydaevkatools.VesselsComponents.TankComponentEnum;
 import mcheli.aircraft.MCH_AircraftInfoManager;
 import mcheli.tank.MCH_TankInfo;
 import mcheli.tank.MCH_TankInfoManager;
+import mcheli.vehicle.MCH_VehicleInfo;
+import mcheli.vehicle.MCH_VehicleInfoManager;
+
 import net.minecraft.item.Item;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 
 import static com.hbm.inventory.OreDictManager.AL;
 import static com.hbm.inventory.OreDictManager.STEEL;
@@ -33,77 +38,81 @@ public class TankDefiner extends AbstractDefiner{
 
     @Override
     void AbstractDefineProcedure() {
-        DefineRecipe(new VesselNTMRecipe(
-            "t90m",VESSEL_TYPE.TANK,100, 100,
-            new RecipesCommon.OreDictStack(STEEL.plateCast(), 16),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.RUSSIAN_ARMOR),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.SECOND_ERA),
-            new RecipesCommon.ComparableStack(ModItems.motor, 16),
-            new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
-            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
-        ));
-        DefineRecipe(new VesselNTMRecipe(
-            "m1a2",VESSEL_TYPE.TANK,100, 100,
-            new RecipesCommon.OreDictStack(STEEL.plateCast(), 24),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.NATO_ARMOR),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.FIRST_ERA),
-            new RecipesCommon.ComparableStack(ModItems.motor, 4),
-            new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
-            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
-        ));
-        DefineRecipe(new VesselNTMRecipe(
-            "embt",VESSEL_TYPE.TANK,100, 100,
-            new RecipesCommon.OreDictStack(STEEL.plateCast(), 24),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.NATO_ARMOR),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.FIRST_ERA),
-            new RecipesCommon.ComparableStack(ModItems.motor, 4),
-            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
-        ));
+        // DefineRecipe(new VesselNTMRecipe(
+            // "t90m",VESSEL_TYPE.TANK,100, 100,
+            // new RecipesCommon.OreDictStack(STEEL.plateCast(), 16),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.RUSSIAN_ARMOR),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.SECOND_ERA),
+            // new RecipesCommon.ComparableStack(ModItems.motor, 16),
+            // new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
+            // new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
+        // ));
+        // DefineRecipe(new VesselNTMRecipe(
+            // "m1a2",VESSEL_TYPE.TANK,100, 100,
+            // new RecipesCommon.OreDictStack(STEEL.plateCast(), 24),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.NATO_ARMOR),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.FIRST_ERA),
+            // new RecipesCommon.ComparableStack(ModItems.motor, 4),
+            // new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
+            // new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
+        // ));
+        // DefineRecipe(new VesselNTMRecipe(
+            // "embt",VESSEL_TYPE.TANK,100, 100,
+            // new RecipesCommon.OreDictStack(STEEL.plateCast(), 24),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.NATO_ARMOR),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.FIRST_ERA),
+            // new RecipesCommon.ComparableStack(ModItems.motor, 4),
+            // new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
+        // ));
         DefineRecipe(new VesselNTMRecipe(
             "bmp2m",VESSEL_TYPE.TANK,100, 100,
+			new RecipesCommon.OreDictStack(STEEL.plateCast(), 8),
             new RecipesCommon.OreDictStack(AL.plateCast(), 8),
             new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
             new RecipesCommon.ComparableStack(ModItems.motor, 4),
             new RecipesCommon.OreDictStack(STEEL.lightBarrel(), 8),
-            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 4, 7)
         ));
         DefineRecipe(new VesselNTMRecipe(
             "m2a3",VESSEL_TYPE.TANK,100, 100,
             new RecipesCommon.OreDictStack(STEEL.plateCast(), 8),
+			new RecipesCommon.OreDictStack(AL.plateCast(), 4),
             new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
             new RecipesCommon.ComparableStack(ModItems.motor, 4),
             new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.FIRST_ERA),
             new RecipesCommon.OreDictStack(STEEL.lightBarrel(), 8),
-            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
-        ));
-        DefineRecipe(new VesselNTMRecipe(
-            "puma", VESSEL_TYPE.TANK,100, 100,
-            new RecipesCommon.OreDictStack(STEEL.plateCast(), 8),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
-            new RecipesCommon.ComparableStack(ModItems.motor, 4),
             new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.FIRST_ERA)
+			new RecipesCommon.ComparableStack(ModItems.circuit, 8, 7)
         ));
-        DefineRecipe(new VesselNTMRecipe(
-            "vt4a1",VESSEL_TYPE.TANK,100, 100,
-            new RecipesCommon.OreDictStack(STEEL.plateCast(), 16),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
-            new RecipesCommon.ComparableStack(ModItems.motor, 16),
-            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
-            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.SECOND_ERA),
-            new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
-        new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.NATO_ARMOR)
-        ));
-        DefineRecipe(new VesselNTMRecipe(
-            "ebrc",VESSEL_TYPE.TANK,100, 100,
-            new RecipesCommon.OreDictStack(AL.plateCast(), 8),
-            new RecipesCommon.ComparableStack(GTDITems.wheel,8),
-            new RecipesCommon.ComparableStack(ModItems.motor, 6),
-            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
-        ));
+        // DefineRecipe(new VesselNTMRecipe(
+            // "puma",VESSEL_TYPE.TANK,100, 100,
+            // new RecipesCommon.OreDictStack(STEEL.plateCast(), 8),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
+            // new RecipesCommon.ComparableStack(ModItems.motor, 4),
+            // new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.FIRST_ERA)
+        // ));
+        // DefineRecipe(new VesselNTMRecipe(
+            // "vt4a1",VESSEL_TYPE.TANK,100, 100,
+            // new RecipesCommon.OreDictStack(STEEL.plateCast(), 16),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
+            // new RecipesCommon.ComparableStack(ModItems.motor, 16),
+            // new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+            // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.SECOND_ERA),
+            // new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
+        // new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.NATO_ARMOR)
+        // ));
+        // DefineRecipe(new VesselNTMRecipe(
+            // "ebrc",VESSEL_TYPE.TANK,100, 100,
+            // new RecipesCommon.OreDictStack(AL.plateCast(), 8),
+            // new RecipesCommon.ComparableStack(GTDITems.wheel,8),
+            // new RecipesCommon.ComparableStack(ModItems.motor, 6),
+            // new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
+        // ));
         DefineRecipe(new VesselNTMRecipe(
             "zbd04a",VESSEL_TYPE.TANK,100, 100,
             new RecipesCommon.OreDictStack(STEEL.plateCast(), 4),
@@ -112,14 +121,15 @@ public class TankDefiner extends AbstractDefiner{
             new RecipesCommon.ComparableStack(ModItems.motor, 4),
             new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
             new RecipesCommon.OreDictStack(STEEL.lightBarrel(), 8),
-            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 4, 7)
         ));
-        Item T90 = ((MCH_TankInfo) MCH_TankInfoManager.get("t90m")).getItem();
-        DefineRecipe(new VesselNTMRecipe(
-            "tos1m",VESSEL_TYPE.TANK,100, 100,
-            new RecipesCommon.ComparableStack(T90, 1),
-            new RecipesCommon.ComparableStack(ModBlocks.turret_himars,1)
-        ));
+        // Item T90 = ((MCH_TankInfo) MCH_TankInfoManager.get("t90m")).getItem();
+        // DefineRecipe(new VesselNTMRecipe(
+            // "tos1m",VESSEL_TYPE.TANK,100, 100,
+            // new RecipesCommon.ComparableStack(T90, 1),
+            // new RecipesCommon.ComparableStack(ModBlocks.turret_himars,1)
+        // ));
         DefineRecipe(new VesselNTMRecipe(
             "zbl08",VESSEL_TYPE.TANK,100, 100,
             new RecipesCommon.OreDictStack(STEEL.plateCast(), 8),
@@ -188,6 +198,108 @@ public class TankDefiner extends AbstractDefiner{
             new RecipesCommon.OreDictStack(STEEL.lightBarrel(), 6),
             new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
 		));
+		// TANKS ----------------------------------------------------------------------------------------------------
+		DefineRecipe(new VesselNTMRecipe(
+            "t72b3",VESSEL_TYPE.TANK,100, 100,
+            new RecipesCommon.OreDictStack(STEEL.plateCast(), 16),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.RUSSIAN_ARMOR),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.FIRST_ERA),
+            new RecipesCommon.ComparableStack(ModItems.motor, 8),
+            new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 4, 7)
+        ));
+		DefineRecipe(new VesselNTMRecipe(
+            "t80bvm",VESSEL_TYPE.TANK,100, 100,
+            new RecipesCommon.OreDictStack(STEEL.plateCast(), 16),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.RUSSIAN_ARMOR),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.SECOND_ERA),
+            new RecipesCommon.ComparableStack(ModItems.motor, 8),
+            new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_AVIATION),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 16, 7)
+        ));
+		DefineRecipe(new VesselNTMRecipe(
+            "ztz99",VESSEL_TYPE.TANK,100, 100,
+            new RecipesCommon.OreDictStack(STEEL.plateCast(), 16),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.NATO_ARMOR),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.SECOND_ERA),
+            new RecipesCommon.ComparableStack(ModItems.motor, 8),
+            new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 4, 7)
+        ));
+		DefineRecipe(new VesselNTMRecipe(
+            "m1a1",VESSEL_TYPE.TANK,100, 100,
+            new RecipesCommon.OreDictStack(STEEL.plateCast(), 12),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 14, TankComponentEnum.ROLLER),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.NATO_ARMOR),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.SECOND_ERA),
+            new RecipesCommon.ComparableStack(ModItems.motor, 10),
+            new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 6),
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_AVIATION),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 8, 7),
+			new RecipesCommon.ComparableStack(ModItems.ingot_polymer, 4),
+			new RecipesCommon.ComparableStack(ModItems.crt_display, 2)
+        ));
+		DefineRecipe(new VesselNTMRecipe(
+            "amx56",VESSEL_TYPE.TANK,100, 100,
+            new RecipesCommon.OreDictStack(STEEL.plateCast(), 12),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 12, TankComponentEnum.ROLLER),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 8, TankComponentEnum.NATO_ARMOR),
+            new RecipesCommon.ComparableStack(ModItems.motor, 14),
+            new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 6),
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 4, 7),
+			new RecipesCommon.ComparableStack(Items.bread, 4)
+        ));
+		DefineRecipe(new VesselNTMRecipe(
+            "tkx",VESSEL_TYPE.TANK,100, 100,
+            new RecipesCommon.OreDictStack(STEEL.plateCast(), 10),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 10, TankComponentEnum.ROLLER),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.NATO_ARMOR),
+            new RecipesCommon.ComparableStack(ModItems.motor, 16),
+            new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 6),
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 32, 7)
+        ));
+		// IFVs --------------------------------------------------------------------------
+		DefineRecipe(new VesselNTMRecipe(
+            "m1128",VESSEL_TYPE.TANK,100, 100,
+            new RecipesCommon.OreDictStack(STEEL.plateCast(), 12),
+			new RecipesCommon.OreDictStack(AL.plateCast(), 12),
+			new RecipesCommon.ComparableStack(Items.brick, 12),
+            new RecipesCommon.ComparableStack(GTDITems.wheel,8),
+            new RecipesCommon.ComparableStack(ModItems.motor, 12),
+            new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 8, 7)
+        ));
+		Item tow = ((MCH_VehicleInfo) MCH_VehicleInfoManager.get("m220tow")).getItem();
+		DefineRecipe(new VesselNTMRecipe(
+            "wiesel1a2",VESSEL_TYPE.TANK,100, 100,
+            new RecipesCommon.OreDictStack(STEEL.plateCast(), 8),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 4, TankComponentEnum.ROLLER),
+            new RecipesCommon.ComparableStack(ModItems.motor, 2),
+            new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 2),
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(tow, 1),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 2, 7)
+        ));
+		DefineRecipe(new VesselNTMRecipe(
+            "2s25m",VESSEL_TYPE.TANK,100, 100,
+            new RecipesCommon.OreDictStack(STEEL.plateCast(), 8),
+			new RecipesCommon.OreDictStack(AL.plateCast(), 10),
+            new RecipesCommon.ComparableStack(GTDITems.tankComponents, 14, TankComponentEnum.ROLLER),
+            new RecipesCommon.ComparableStack(ModItems.motor, 8),
+            new RecipesCommon.OreDictStack(STEEL.heavyBarrel(), 8),
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 16, 7)
+        ));
+
 
         //2S38
         //AL CAST PLATES
@@ -198,5 +310,14 @@ public class TankDefiner extends AbstractDefiner{
         //EBRC AL PLATES + WHEELS
         //EMBT M2A3 COPY
         //M2A3 USES BUSK ERA
+		
+		//future custom items:
+		//engines to be replaced by custom one
+		//barrels to be replaced with cutsom turrets
+		//circuits to be replaced by SUO
+		//polymers to be replaced by meme chair
+		//crt -expect spaa- to be replaced by KOEP system
+		//crt radars to be replaced by custom radars
+		//shells and atgm expansion by some tiers
     }
 }
