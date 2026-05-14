@@ -42,7 +42,9 @@ public class HeliDefiner extends AbstractDefiner
             new RecipesCommon.ComparableStack(ModItems.motor, 8),
             new RecipesCommon.OreDictStack(STEEL.lightBarrel(), 2),
             new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
-			new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
+			new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 4, 7),
+			new RecipesCommon.ComparableStack(ModBlocks.machine_radar,1)
         ));
         DefineRecipe(new VesselNTMRecipe(
             "mh60g",VESSEL_TYPE.HELI,100, 100,
@@ -53,7 +55,22 @@ public class HeliDefiner extends AbstractDefiner
             new RecipesCommon.ComparableStack(ModItems.motor, 8),
             new RecipesCommon.OreDictStack(STEEL.lightBarrel(), 4),
             new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
-			new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL)
+			new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_DIESEL),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 16, 7),
+			new RecipesCommon.ComparableStack(ModBlocks.machine_radar,1)
+        ));
+        DefineRecipe(new VesselNTMRecipe(
+            "sh60",VESSEL_TYPE.HELI,100, 100,
+            new RecipesCommon.OreDictStack(AL.plateCast(), 32),
+            new RecipesCommon.OreDictStack(TI.plateCast(), 32),
+            new RecipesCommon.ComparableStack(GTDITems.wheel,3),
+            new RecipesCommon.ComparableStack(ModItems.blade_titanium, 8),
+            new RecipesCommon.ComparableStack(ModItems.motor, 8),
+            new RecipesCommon.OreDictStack(STEEL.shell(), 4),
+            new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_AVIATION),
+			new RecipesCommon.ComparableStack(ModItems.weapon_mod_special, 1,GunFactory.EnumModSpecial.ENGINE_AVIATION),
+			new RecipesCommon.ComparableStack(ModItems.circuit, 32, 7),
+			new RecipesCommon.ComparableStack(ModBlocks.machine_radar,1)
         ));
     }
 }
